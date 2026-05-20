@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Kit — Mhitzy Chriss</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Yellowtail&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#fdf7eb;
+  --navy:#2d3142;
+  --magenta:#ff3cac;
+  --cyan:#00f0ff;
+  --coral:#ff6f61;
+  --lavender:#e6d6f0;
+  --beige:#f5f5dc;
+  --white:#ffffff;
+}
+
+body{
+  background:#f0ece4;
+  font-family:'Montserrat',sans-serif;
+  color:var(--navy);
+  line-height:1.6;
+}
+
+/* ───── PAGE WRAPPER ───── */
+.kit{
+  width:794px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  gap:0;
+}
+
+/* ───── SHARED PAGE ───── */
+.page{
+  width:794px;
+  min-height:1123px;
+  background:var(--cream);
+  position:relative;
+  overflow:hidden;
+  page-break-after:always;
+  margin-bottom:32px;
+  box-shadow:0 8px 40px rgba(0,0,0,0.13);
+}
+
+/* ───── DECORATIVE ELEMENTS ───── */
+.deco-blob{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(60px);
+  opacity:0.35;
+  pointer-events:none;
+}
+
+/* ═══════════════════════════════
+   PAGE 1 — COVER
+═══════════════════════════════ */
+.p1-bg{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,var(--cream) 0%,#fce8f4 50%,#e8f8ff 100%);
+}
+
+.p1-accent-left{
+  position:absolute;
+  left:-60px;top:-60px;
+  width:300px;height:300px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--magenta),var(--cyan));
+  opacity:0.12;
+  filter:blur(70px);
+}
+.p1-accent-right{
+  position:absolute;
+  right:-40px;bottom:80px;
+  width:260px;height:260px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--coral),var(--magenta));
+  opacity:0.14;
+  filter:blur(60px);
+}
+.p1-accent-bottom{
+  position:absolute;
+  left:60px;bottom:-40px;
+  width:220px;height:220px;
+  border-radius:50%;
+  background:var(--cyan);
+  opacity:0.1;
+  filter:blur(55px);
+}
+
+/* top bar */
+.p1-topbar{
+  position:relative;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:28px 48px 0;
+}
+.p1-brand{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:15px;
+  letter-spacing:.2em;
+  color:var(--navy);
+  opacity:.45;
+}
+.p1-tag{
+  font-family:'Montserrat',sans-serif;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  color:var(--magenta);
+  border:1px solid var(--magenta);
+  border-radius:20px;
+  padding:4px 14px;
+}
+
+/* hero layout */
+.p1-hero{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:1fr 340px;
+  align-items:center;
+  min-height:920px;
+  padding:0 48px;
+  gap:0;
+}
+
+.p1-text{
+  padding-right:40px;
+  padding-top:20px;
+}
+
+.p1-eyebrow{
+  font-family:'Yellowtail',cursive;
+  font-size:22px;
+  color:var(--coral);
+  margin-bottom:12px;
+  display:block;
+}
+
+.p1-name{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:88px;
+  line-height:.92;
+  color:var(--navy);
+  margin-bottom:20px;
+  letter-spacing:.02em;
+}
+.p1-name .accent{
+  display:block;
+  background:linear-gradient(90deg,var(--magenta),var(--cyan));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+
+.p1-subtitle{
+  font-family:'Playfair Display',serif;
+  font-size:14px;
+  font-weight:400;
+  color:var(--navy);
+  opacity:.7;
+  letter-spacing:.04em;
+  margin-bottom:28px;
+  line-height:1.5;
+}
+
+.p1-pills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:36px;
+}
+.p1-pill{
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  padding:7px 18px;
+  border-radius:30px;
+  border:1.5px solid;
+}
+.p1-pill.mg{border-color:var(--magenta);color:var(--magenta);}
+.p1-pill.cy{border-color:var(--cyan);color:#009aaa;}
+.p1-pill.co{border-color:var(--coral);color:var(--coral);}
+.p1-pill.nv{border-color:var(--navy);color:var(--navy);opacity:.6;}
+
+.p1-divider{
+  width:56px;height:3px;
+  background:linear-gradient(90deg,var(--magenta),var(--cyan));
+  border-radius:2px;
+  margin-bottom:24px;
+}
+
+.p1-tagline{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:15px;
+  color:var(--navy);
+  opacity:.55;
+  line-height:1.6;
+  max-width:320px;
+}
+
+/* photo frame */
+.p1-photo-wrap{
+  position:relative;
+  height:780px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+}
+.p1-photo-frame{
+  position:absolute;
+  right:-10px;
+  top:20px;
+  width:320px;
+  height:720px;
+  border-radius:200px 200px 120px 120px;
+  background:linear-gradient(160deg,var(--magenta) 0%,var(--cyan) 100%);
+  opacity:.18;
+}
+.p1-photo-frame2{
+  position:absolute;
+  right:10px;
+  top:40px;
+  width:300px;
+  height:680px;
+  border-radius:190px 190px 110px 110px;
+  border:1.5px solid rgba(255,60,172,.25);
+}
+.p1-photo{
+  position:relative;
+  z-index:1;
+  width:290px;
+  height:660px;
+  border-radius:180px 180px 100px 100px;
+  object-fit:cover;
+  object-position:center top;
+  overflow:hidden;
+}
+.p1-photo-placeholder{
+  width:290px;
+  height:660px;
+  border-radius:180px 180px 100px 100px;
+  background:linear-gradient(160deg,rgba(255,60,172,.12) 0%,rgba(0,240,255,.15) 100%);
+  border:1.5px solid rgba(255,60,172,.2);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  position:relative;
+  z-index:1;
+}
+.p1-photo-placeholder svg{opacity:.25;}
+.p1-photo-placeholder span{
+  font-family:'Montserrat',sans-serif;
+  font-size:10px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--navy);
+  opacity:.35;
+}
+
+/* floating stat card */
+.p1-float-card{
+  position:absolute;
+  bottom:110px;
+  left:-30px;
+  background:var(--white);
+  border-radius:16px;
+  padding:16px 22px;
+  box-shadow:0 8px 32px rgba(45,49,66,.1);
+  z-index:5;
+  min-width:160px;
+  border-left:3px solid var(--magenta);
+}
+.p1-float-card .fc-label{
+  font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--magenta);margin-bottom:4px;
+}
+.p1-float-card .fc-value{
+  font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--navy);line-height:1;
+}
+.p1-float-card .fc-sub{
+  font-size:9px;color:var(--navy);opacity:.45;font-weight:500;
+}
+
+.p1-float-card2{
+  position:absolute;
+  top:180px;
+  left:-20px;
+  background:var(--navy);
+  border-radius:14px;
+  padding:14px 20px;
+  box-shadow:0 8px 28px rgba(45,49,66,.18);
+  z-index:5;
+  min-width:140px;
+}
+.p1-float-card2 .fc-label{color:var(--cyan);font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px;}
+.p1-float-card2 .fc-value{font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--white);line-height:1;}
+.p1-float-card2 .fc-sub{font-size:9px;color:rgba(255,255,255,.45);font-weight:500;}
+
+/* bottom bar p1 */
+.p1-bottom{
+  position:absolute;
+  bottom:0;left:0;right:0;
+  height:52px;
+  background:var(--navy);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 48px;
+  z-index:4;
+}
+.p1-bottom-brand{
+  font-family:'Yellowtail',cursive;
+  font-size:18px;
+  color:var(--white);
+  letter-spacing:.03em;
+}
+.p1-bottom-dots{
+  display:flex;gap:6px;
+}
+.p1-bottom-dots span{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--magenta);
+}
+.p1-bottom-dots span:nth-child(2){background:var(--cyan);}
+.p1-bottom-dots span:nth-child(3){background:rgba(255,255,255,.3);}
+.p1-bottom-url{
+  font-size:10px;letter-spacing:.1em;color:rgba(255,255,255,.4);
+  font-weight:500;text-transform:uppercase;
+}
+
+/* ═══════════════════════════════
+   PAGE 2 — ABOUT + CONTENT
+═══════════════════════════════ */
+.p2-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:36px 48px 0;
+  position:relative;
+  z-index:2;
+}
+.page-num{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:13px;letter-spacing:.2em;
+  color:rgba(45,49,66,.25);
+}
+.p2-header-brand{
+  font-family:'Yellowtail',cursive;
+  font-size:17px;
+  color:var(--magenta);
+}
+
+.p2-body{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:36px;
+  padding:36px 48px;
+  position:relative;
+  z-index:2;
+}
+
+/* about section */
+.p2-about-label{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:11px;
+  letter-spacing:.3em;
+  color:var(--magenta);
+  margin-bottom:10px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.p2-about-label::after{
+  content:'';flex:1;height:1.5px;
+  background:linear-gradient(90deg,var(--magenta),transparent);
+}
+
+.p2-about-title{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:48px;
+  line-height:.95;
+  color:var(--navy);
+  margin-bottom:20px;
+}
+.p2-about-title em{
+  display:block;
+  font-family:'Yellowtail',cursive;
+  font-size:32px;
+  font-style:normal;
+  color:var(--coral);
+  line-height:1.2;
+}
+
+.p2-about-text{
+  font-size:13px;
+  font-weight:300;
+  color:var(--navy);
+  opacity:.75;
+  line-height:1.8;
+  margin-bottom:24px;
+}
+
+.p2-pillars{
+  display:flex;flex-direction:column;gap:10px;
+}
+.p2-pillar{
+  display:flex;align-items:center;gap:12px;
+  background:var(--white);
+  border-radius:12px;
+  padding:12px 16px;
+  border:1px solid rgba(45,49,66,.06);
+}
+.p2-pillar-dot{
+  width:8px;height:8px;border-radius:50%;flex-shrink:0;
+}
+.p2-pillar-text{
+  font-size:12px;font-weight:600;
+  color:var(--navy);letter-spacing:.04em;
+}
+
+/* content style section */
+.p2-content-label{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:11px;
+  letter-spacing:.3em;
+  color:var(--cyan);
+  color:#009aaa;
+  margin-bottom:10px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.p2-content-label::after{
+  content:'';flex:1;height:1.5px;
+  background:linear-gradient(90deg,#00c8d4,transparent);
+}
+
+.p2-content-title{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:48px;
+  line-height:.95;
+  color:var(--navy);
+  margin-bottom:20px;
+}
+.p2-content-title em{
+  display:block;
+  font-family:'Yellowtail',cursive;
+  font-size:32px;
+  font-style:normal;
+  color:#009aaa;
+  line-height:1.2;
+}
+
+/* content grid */
+.p2-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-bottom:14px;
+}
+.p2-grid-card{
+  border-radius:14px;
+  padding:14px 16px;
+  position:relative;
+  overflow:hidden;
+  min-height:90px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+.p2-grid-card .gc-label{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:15px;
+  letter-spacing:.06em;
+  line-height:1;
+  position:relative;z-index:1;
+}
+.p2-grid-card .gc-sub{
+  font-size:9.5px;font-weight:500;
+  opacity:.7;position:relative;z-index:1;
+  margin-top:3px;
+}
+.p2-grid-card.gc1{background:linear-gradient(135deg,#ffe4f0,#ffd4f8);border:1px solid rgba(255,60,172,.15);}
+.p2-grid-card.gc1 .gc-label{color:#cc1a7e;}
+.p2-grid-card.gc1 .gc-sub{color:#cc1a7e;}
+.p2-grid-card.gc2{background:linear-gradient(135deg,#d8f9ff,#e8f0ff);border:1px solid rgba(0,200,220,.18);}
+.p2-grid-card.gc2 .gc-label{color:#00707a;}
+.p2-grid-card.gc2 .gc-sub{color:#00707a;}
+.p2-grid-card.gc3{background:linear-gradient(135deg,#fff0ee,#ffe8e4);border:1px solid rgba(255,111,97,.2);}
+.p2-grid-card.gc3 .gc-label{color:#b04030;}
+.p2-grid-card.gc3 .gc-sub{color:#b04030;}
+.p2-grid-card.gc4{background:var(--navy);border:1px solid rgba(255,60,172,.25);}
+.p2-grid-card.gc4 .gc-label{color:var(--white);}
+.p2-grid-card.gc4 .gc-sub{color:rgba(255,255,255,.55);}
+.p2-grid-card.gc5{background:linear-gradient(135deg,#f4eefc,#f0e8ff);border:1px solid rgba(155,100,210,.15);}
+.p2-grid-card.gc5 .gc-label{color:#7040b0;}
+.p2-grid-card.gc5 .gc-sub{color:#7040b0;}
+.p2-grid-card.gc6{background:linear-gradient(135deg,#fffbe8,#fff4d0);border:1px solid rgba(220,170,20,.15);}
+.p2-grid-card.gc6 .gc-label{color:#8a6000;}
+.p2-grid-card.gc6 .gc-sub{color:#8a6000;}
+
+.p2-grid-card-wide{
+  border-radius:14px;
+  padding:14px 20px;
+  background:linear-gradient(90deg,var(--magenta) 0%,var(--cyan) 100%);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.p2-grid-card-wide .gc-label{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:15px;
+  letter-spacing:.06em;
+  color:var(--white);
+}
+.p2-grid-card-wide .gc-sub{
+  font-size:9.5px;font-weight:500;
+  color:rgba(255,255,255,.75);
+  margin-top:3px;
+}
+.p2-grid-card-wide .gc-badge{
+  background:rgba(255,255,255,.2);
+  border-radius:20px;
+  padding:4px 12px;
+  font-size:10px;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:var(--white);
+  white-space:nowrap;
+}
+
+/* vibe tags */
+.p2-vibe-row{
+  display:flex;flex-wrap:wrap;gap:7px;margin-top:4px;
+}
+.p2-vibe{
+  font-size:10px;font-weight:600;letter-spacing:.07em;
+  padding:5px 12px;border-radius:20px;
+  border:1.5px solid;
+}
+.p2-vibe.v1{border-color:var(--magenta);color:var(--magenta);}
+.p2-vibe.v2{border-color:#009aaa;color:#009aaa;}
+.p2-vibe.v3{border-color:var(--coral);color:var(--coral);}
+.p2-vibe.v4{border-color:var(--navy);color:var(--navy);opacity:.55;}
+.p2-vibe.v5{border-color:#7040b0;color:#7040b0;}
+.p2-vibe.v6{border-color:#8a6000;color:#8a6000;}
+
+/* bottom bar p2 */
+.p2-bottom{
+  position:absolute;
+  bottom:0;left:0;right:0;
+  height:52px;
+  background:var(--navy);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 48px;
+  z-index:4;
+}
+.p2-bottom-quote{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:12px;
+  color:rgba(255,255,255,.45);
+}
+.p2-bottom-right{
+  display:flex;align-items:center;gap:14px;
+}
+.p2-bottom-dot{width:5px;height:5px;border-radius:50%;background:var(--magenta);}
+.p2-bottom-num{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:.15em;color:rgba(255,255,255,.3);}
+
+/* decorative background p2 */
+.p2-deco1{
+  position:absolute;top:-100px;right:-80px;
+  width:350px;height:350px;border-radius:50%;
+  background:linear-gradient(135deg,var(--magenta),var(--cyan));
+  opacity:.06;filter:blur(60px);
+}
+.p2-deco2{
+  position:absolute;bottom:60px;left:-60px;
+  width:250px;height:250px;border-radius:50%;
+  background:var(--coral);
+  opacity:.07;filter:blur(50px);
+}
+
+/* ═══════════════════════════════
+   PAGE 3 — STATS + SERVICES + CONTACT
+═══════════════════════════════ */
+.p3-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:36px 48px 0;
+  position:relative;z-index:2;
+}
+
+.p3-body{
+  padding:30px 48px 80px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:auto auto auto;
+  gap:28px;
+  position:relative;z-index:2;
+}
+
+/* section label */
+.sec-label{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:11px;
+  letter-spacing:.3em;
+  margin-bottom:14px;
+  display:flex;align-items:center;gap:10px;
+}
+.sec-label::after{
+  content:'';flex:1;height:1.5px;
+  border-radius:1px;
+}
+.sec-label.sl-mg{color:var(--magenta);}
+.sec-label.sl-mg::after{background:linear-gradient(90deg,var(--magenta),transparent);}
+.sec-label.sl-cy{color:#009aaa;}
+.sec-label.sl-cy::after{background:linear-gradient(90deg,#009aaa,transparent);}
+.sec-label.sl-co{color:var(--coral);}
+.sec-label.sl-co::after{background:linear-gradient(90deg,var(--coral),transparent);}
+
+/* social stats */
+.p3-social-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:12px;
+}
+.p3-social-card{
+  background:var(--white);
+  border-radius:16px;
+  padding:18px 20px;
+  border:1px solid rgba(45,49,66,.06);
+  position:relative;
+  overflow:hidden;
+}
+.p3-social-card::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;
+  height:3px;
+}
+.p3-social-card.sc-ig::before{background:linear-gradient(90deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);}
+.p3-social-card.sc-tk::before{background:linear-gradient(90deg,#010101,#69c9d0,#ee1d52);}
+
+.p3-social-icon{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:10px;letter-spacing:.18em;
+  opacity:.45;margin-bottom:10px;
+  display:block;
+}
+.p3-social-followers{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:36px;line-height:1;
+  color:var(--navy);margin-bottom:4px;
+}
+.p3-social-followers span{
+  font-family:'Montserrat',sans-serif;
+  font-size:12px;font-weight:400;
+  color:rgba(45,49,66,.4);
+  margin-left:4px;
+}
+.p3-social-meta{
+  display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:12px;
+}
+.p3-social-stat{
+  background:rgba(45,49,66,.04);
+  border-radius:8px;padding:7px 10px;
+}
+.p3-social-stat .ss-label{
+  font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(45,49,66,.45);margin-bottom:2px;
+}
+.p3-social-stat .ss-val{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:16px;color:var(--navy);
+}
+
+/* services */
+.p3-services-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;
+}
+.p3-service{
+  background:var(--white);
+  border-radius:12px;
+  padding:14px 16px;
+  border:1px solid rgba(45,49,66,.06);
+  display:flex;align-items:flex-start;gap:10px;
+  transition:all .2s;
+}
+.p3-service:hover{border-color:rgba(255,60,172,.25);}
+.p3-service-icon{
+  width:32px;height:32px;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;font-size:14px;
+}
+.p3-service-icon.si-mg{background:rgba(255,60,172,.1);}
+.p3-service-icon.si-cy{background:rgba(0,240,255,.1);}
+.p3-service-icon.si-co{background:rgba(255,111,97,.1);}
+.p3-service-icon.si-nv{background:rgba(45,49,66,.08);}
+.p3-service-icon .si-emoji{line-height:1;}
+.p3-service-text .st-title{
+  font-size:11.5px;font-weight:700;color:var(--navy);
+  margin-bottom:2px;
+}
+.p3-service-text .st-desc{
+  font-size:10px;color:rgba(45,49,66,.5);font-weight:400;
+}
+
+/* audience */
+.p3-audience{
+  grid-column:1/-1;
+}
+.p3-aud-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:12px;
+}
+.p3-aud-card{
+  background:var(--white);
+  border-radius:14px;
+  padding:16px;
+  border:1px solid rgba(45,49,66,.06);
+  text-align:center;
+}
+.p3-aud-num{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:30px;line-height:1;
+  margin-bottom:4px;
+}
+.p3-aud-label{
+  font-size:10px;font-weight:600;letter-spacing:.06em;
+  color:rgba(45,49,66,.5);
+  text-transform:uppercase;
+  line-height:1.4;
+}
+.p3-aud-card.ac1 .p3-aud-num{color:var(--magenta);}
+.p3-aud-card.ac2 .p3-aud-num{color:#009aaa;}
+.p3-aud-card.ac3 .p3-aud-num{color:var(--coral);}
+.p3-aud-card.ac4 .p3-aud-num{color:#7040b0;}
+
+/* contact */
+.p3-contact-wrap{
+  grid-column:1/-1;
+  background:var(--navy);
+  border-radius:20px;
+  padding:28px 32px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  position:relative;
+  overflow:hidden;
+}
+.p3-contact-wrap::before{
+  content:'';
+  position:absolute;
+  top:-60px;right:-60px;
+  width:220px;height:220px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--magenta),var(--cyan));
+  opacity:.18;
+  filter:blur(50px);
+}
+.p3-contact-title{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:36px;line-height:1;
+  color:var(--white);
+  margin-bottom:4px;
+}
+.p3-contact-sub{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:13px;
+  color:rgba(255,255,255,.5);
+  margin-bottom:20px;
+}
+.p3-contact-links{
+  display:flex;flex-direction:column;gap:10px;
+}
+.p3-contact-link{
+  display:flex;align-items:center;gap:10px;
+  font-size:12px;font-weight:500;
+  color:rgba(255,255,255,.75);
+}
+.p3-contact-link .cl-icon{
+  width:28px;height:28px;border-radius:7px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:800;
+  flex-shrink:0;
+}
+.p3-contact-link .cl-icon.ci-em{background:rgba(255,60,172,.25);color:var(--magenta);}
+.p3-contact-link .cl-icon.ci-ig{background:rgba(255,111,97,.25);color:var(--coral);}
+.p3-contact-link .cl-icon.ci-tk{background:rgba(0,240,255,.15);color:var(--cyan);}
+.p3-contact-link .cl-val{color:rgba(255,255,255,.55);}
+
+.p3-cta{
+  text-align:right;
+  flex-shrink:0;
+}
+.p3-cta-main{
+  font-family:'Yellowtail',cursive;
+  font-size:22px;
+  color:var(--white);
+  margin-bottom:6px;
+}
+.p3-cta-sub{
+  font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,.35);
+  margin-bottom:18px;
+}
+.p3-cta-btn{
+  display:inline-block;
+  background:linear-gradient(90deg,var(--magenta),var(--cyan));
+  border-radius:30px;
+  padding:10px 28px;
+  font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--white);
+  text-decoration:none;
+}
+
+/* decorative background p3 */
+.p3-deco1{
+  position:absolute;top:-80px;right:-60px;
+  width:300px;height:300px;border-radius:50%;
+  background:linear-gradient(135deg,var(--magenta),var(--cyan));
+  opacity:.05;filter:blur(60px);
+}
+.p3-deco2{
+  position:absolute;bottom:80px;left:-50px;
+  width:220px;height:220px;border-radius:50%;
+  background:var(--coral);
+  opacity:.06;filter:blur(50px);
+}
+
+/* bottom bar p3 */
+.p3-bottom{
+  position:absolute;
+  bottom:0;left:0;right:0;
+  height:52px;
+  background:linear-gradient(90deg,var(--magenta) 0%,var(--cyan) 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:4;
+}
+.p3-bottom-text{
+  font-family:'Montserrat',sans-serif;
+  font-size:10px;font-weight:700;
+  letter-spacing:.25em;text-transform:uppercase;
+  color:var(--white);
+  opacity:.8;
+}
+
+/* ───── PRINT ───── */
+@media print{
+  body{background:none;}
+  .page{margin-bottom:0;box-shadow:none;}
+}
+</style>
+</head>
+<body>
+<div class="kit">
+
+<!-- ═══════════ PAGE 1 ═══════════ -->
+<div class="page">
+  <div class="p1-bg"></div>
+  <div class="p1-accent-left"></div>
+  <div class="p1-accent-right"></div>
+  <div class="p1-accent-bottom"></div>
+
+  <div class="p1-topbar">
+    <div class="p1-brand">Mhitzy Chriss · Media Kit 2026</div>
+    <div class="p1-tag">Available for Collabs</div>
+  </div>
+
+  <div class="p1-hero">
+    <div class="p1-text">
+      <span class="p1-eyebrow">Hola, soy</span>
+      <div class="p1-name">
+        MHITZY<br>
+        <span class="accent">CHRISS</span>
+      </div>
+      <div class="p1-subtitle">
+        Content Creator &amp; Digital Marketing Professional
+      </div>
+      <div class="p1-pills">
+        <div class="p1-pill mg">Lifestyle</div>
+        <div class="p1-pill cy">Fitness</div>
+        <div class="p1-pill co">Motherhood</div>
+        <div class="p1-pill nv">Personal Growth</div>
+      </div>
+      <div class="p1-divider"></div>
+      <div class="p1-tagline">
+        Una marca que no solo se ve bien,<br>sino que se siente real.
+      </div>
+    </div>
+
+    <div class="p1-photo-wrap">
+      <div class="p1-photo-frame"></div>
+      <div class="p1-photo-frame2"></div>
+      <div class="p1-photo-placeholder">
+        <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+          <circle cx="30" cy="22" r="13" stroke="#2d3142" stroke-width="2"/>
+          <path d="M8 52c0-12.15 9.85-22 22-22s22 9.85 22 22" stroke="#2d3142" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>Tu foto aquí</span>
+      </div>
+
+      <div class="p1-float-card">
+        <div class="fc-label">Engagement</div>
+        <div class="fc-value">—%</div>
+        <div class="fc-sub">Tasa promedio</div>
+      </div>
+      <div class="p1-float-card2">
+        <div class="fc-label">Alcance</div>
+        <div class="fc-value">—K</div>
+        <div class="fc-sub">Mensual</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p1-bottom">
+    <div class="p1-bottom-brand">Mhitzy Chriss</div>
+    <div class="p1-bottom-dots">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="p1-bottom-url">@mhitzychriss · Lima, Perú</div>
+  </div>
+</div>
+
+<!-- ═══════════ PAGE 2 ═══════════ -->
+<div class="page">
+  <div class="p2-deco1"></div>
+  <div class="p2-deco2"></div>
+
+  <div class="p2-header">
+    <div class="page-num">02 / 03</div>
+    <div class="p2-header-brand">Mhitzy Chriss</div>
+  </div>
+
+  <div class="p2-body">
+    <!-- LEFT: ABOUT -->
+    <div>
+      <div class="p2-about-label">About Me</div>
+      <div class="p2-about-title">
+        Quien<br>
+        <em>soy yo</em>
+      </div>
+      <div class="p2-about-text">
+        ¡Hola! Soy Mhitzy Chriss, creadora de contenido lifestyle y profesional en marketing digital.<br><br>
+        Comparto contenido auténtico sobre maternidad, fitness y crecimiento personal, mostrando mi día a día de una manera cercana, inspiradora y visualmente atractiva.<br><br>
+        Mi objetivo es crear contenido con el que las personas puedan identificarse, mientras construyo una comunidad basada en motivación, bienestar y conexiones reales.
+      </div>
+      <div class="p2-pillars">
+        <div class="p2-pillar">
+          <div class="p2-pillar-dot" style="background:var(--magenta)"></div>
+          <div class="p2-pillar-text">💛 Maternidad real — honesta y cercana</div>
+        </div>
+        <div class="p2-pillar">
+          <div class="p2-pillar-dot" style="background:#009aaa"></div>
+          <div class="p2-pillar-text">🏋️ Transformación personal — fitness &amp; running</div>
+        </div>
+        <div class="p2-pillar">
+          <div class="p2-pillar-dot" style="background:var(--coral)"></div>
+          <div class="p2-pillar-text">💼 Vida profesional — marketing &amp; crecimiento</div>
+        </div>
+        <div class="p2-pillar">
+          <div class="p2-pillar-dot" style="background:#7040b0"></div>
+          <div class="p2-pillar-text">🧠 Reflexión personal — experiencias propias</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: CONTENT STYLE -->
+    <div>
+      <div class="p2-content-label">Content Style</div>
+      <div class="p2-content-title">
+        Qué<br>
+        <em>creo</em>
+      </div>
+      <div class="p2-grid">
+        <div class="p2-grid-card gc1">
+          <div class="gc-label">Reels &amp; TikToks</div>
+          <div class="gc-sub">Video corto viral</div>
+        </div>
+        <div class="p2-grid-card gc2">
+          <div class="gc-label">Lifestyle</div>
+          <div class="gc-sub">Día a día real</div>
+        </div>
+        <div class="p2-grid-card gc3">
+          <div class="gc-label">Fitness</div>
+          <div class="gc-sub">Running &amp; gym</div>
+        </div>
+        <div class="p2-grid-card gc4">
+          <div class="gc-label">Motherhood</div>
+          <div class="gc-sub">Maternidad honesta</div>
+        </div>
+        <div class="p2-grid-card gc5">
+          <div class="gc-label">Storytelling</div>
+          <div class="gc-sub">Narrativa personal</div>
+        </div>
+        <div class="p2-grid-card gc6">
+          <div class="gc-label">Trends</div>
+          <div class="gc-sub">Adaptados a mi voz</div>
+        </div>
+      </div>
+      <div class="p2-grid-card-wide">
+        <div>
+          <div class="gc-label">UGC Content</div>
+          <div class="gc-sub">Contenido auténtico para marcas</div>
+        </div>
+        <div class="gc-badge">Portafolio disponible</div>
+      </div>
+      <div class="p2-vibe-row" style="margin-top:14px;">
+        <div class="p2-vibe v1">Auténtica</div>
+        <div class="p2-vibe v2">Cercana</div>
+        <div class="p2-vibe v3">Inspiradora</div>
+        <div class="p2-vibe v4">Premium</div>
+        <div class="p2-vibe v5">Real</div>
+        <div class="p2-vibe v6">Empoderada</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p2-bottom">
+    <div class="p2-bottom-quote">"Sofisticación accesible — energía vibrante en cada post."</div>
+    <div class="p2-bottom-right">
+      <div class="p2-bottom-dot"></div>
+      <div class="p2-bottom-num">02</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ PAGE 3 ═══════════ -->
+<div class="page">
+  <div class="p3-deco1"></div>
+  <div class="p3-deco2"></div>
+
+  <div class="p3-header">
+    <div class="page-num">03 / 03</div>
+    <div class="p2-header-brand">Mhitzy Chriss</div>
+  </div>
+
+  <div class="p3-body">
+
+    <!-- SOCIAL STATS -->
+    <div>
+      <div class="sec-label sl-mg">Social Media</div>
+      <div class="p3-social-grid">
+        <div class="p3-social-card sc-ig">
+          <span class="p3-social-icon">INSTAGRAM</span>
+          <div class="p3-social-followers">—K <span>followers</span></div>
+          <div class="p3-social-meta">
+            <div class="p3-social-stat">
+              <div class="ss-label">Engagement</div>
+              <div class="ss-val">—%</div>
+            </div>
+            <div class="p3-social-stat">
+              <div class="ss-label">Alcance</div>
+              <div class="ss-val">—K</div>
+            </div>
+          </div>
+        </div>
+        <div class="p3-social-card sc-tk">
+          <span class="p3-social-icon">TIKTOK</span>
+          <div class="p3-social-followers">—K <span>followers</span></div>
+          <div class="p3-social-meta">
+            <div class="p3-social-stat">
+              <div class="ss-label">Engagement</div>
+              <div class="ss-val">—%</div>
+            </div>
+            <div class="p3-social-stat">
+              <div class="ss-label">Alcance</div>
+              <div class="ss-val">—K</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AUDIENCE STATS -->
+    <div>
+      <div class="sec-label sl-cy">Audiencia</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div class="p3-aud-card ac1">
+          <div class="p3-aud-num">—%</div>
+          <div class="p3-aud-label">Mujeres<br>18–35</div>
+        </div>
+        <div class="p3-aud-card ac2">
+          <div class="p3-aud-num">Perú</div>
+          <div class="p3-aud-label">Audiencia<br>principal</div>
+        </div>
+        <div class="p3-aud-card ac3">
+          <div class="p3-aud-num">—K</div>
+          <div class="p3-aud-label">Impresiones<br>mensuales</div>
+        </div>
+        <div class="p3-aud-card ac4">
+          <div class="p3-aud-num">—K</div>
+          <div class="p3-aud-label">Guardados<br>promedio</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <div style="grid-column:1/-1;">
+      <div class="sec-label sl-co">Services</div>
+      <div class="p3-services-grid">
+        <div class="p3-service">
+          <div class="p3-service-icon si-mg"><span class="si-emoji">🎬</span></div>
+          <div class="p3-service-text">
+            <div class="st-title">Brand Collaborations</div>
+            <div class="st-desc">Colaboración orgánica con tu marca</div>
+          </div>
+        </div>
+        <div class="p3-service">
+          <div class="p3-service-icon si-cy"><span class="si-emoji">📱</span></div>
+          <div class="p3-service-text">
+            <div class="st-title">UGC Videos</div>
+            <div class="st-desc">Contenido auténtico para tu feed</div>
+          </div>
+        </div>
+        <div class="p3-service">
+          <div class="p3-service-icon si-co"><span class="si-emoji">⭐</span></div>
+          <div class="p3-service-text">
+            <div class="st-title">Product Reviews</div>
+            <div class="st-desc">Reseñas honestas y naturales</div>
+          </div>
+        </div>
+        <div class="p3-service">
+          <div class="p3-service-icon si-nv"><span class="si-emoji">✨</span></div>
+          <div class="p3-service-text">
+            <div class="st-title">Lifestyle Integration</div>
+            <div class="st-desc">Productos en contexto real</div>
+          </div>
+        </div>
+        <div class="p3-service">
+          <div class="p3-service-icon si-mg"><span class="si-emoji">🎥</span></div>
+          <div class="p3-service-text">
+            <div class="st-title">Reels &amp; TikToks</div>
+            <div class="st-desc">Video corto de alto impacto</div>
+          </div>
+        </div>
+        <div class="p3-service">
+          <div class="p3-service-icon si-cy"><span class="si-emoji">🎪</span></div>
+          <div class="p3-service-text">
+            <div class="st-title">Event Coverage</div>
+            <div class="st-desc">Cobertura en vivo de eventos</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div style="grid-column:1/-1;">
+      <div class="p3-contact-wrap">
+        <div>
+          <div class="p3-contact-title">¿Trabajamos<br>juntos?</div>
+          <div class="p3-contact-sub">Available for collaborations, partnerships &amp; UGC content</div>
+          <div class="p3-contact-links">
+            <div class="p3-contact-link">
+              <div class="cl-icon ci-em">✉</div>
+              <span class="cl-val">hola@mhitzychriss.com</span>
+            </div>
+            <div class="p3-contact-link">
+              <div class="cl-icon ci-ig">IG</div>
+              <span class="cl-val">@mhitzychriss</span>
+            </div>
+            <div class="p3-contact-link">
+              <div class="cl-icon ci-tk">TK</div>
+              <span class="cl-val">@mhitzychriss</span>
+            </div>
+          </div>
+        </div>
+        <div class="p3-cta">
+          <div class="p3-cta-main">Mhitzy Chriss</div>
+          <div class="p3-cta-sub">Lima, Perú · 2026</div>
+          <a class="p3-cta-btn" href="#">Contáctame →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="p3-bottom">
+    <div class="p3-bottom-text">Mhitzy Chriss · Content Creator &amp; UGC · Lima, Perú</div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
